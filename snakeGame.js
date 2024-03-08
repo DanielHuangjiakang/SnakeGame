@@ -154,24 +154,24 @@ function updateCanvas() {
 window.onload = onPageLoaded
 
 function onPageLoaded() {
-    // Attach event listeners to buttons
-    document.getElementById('btn-left').addEventListener('click', function() {
-        var originX = snack.direction.x
-        var originY = snack.direction.y
-        if (snack.direction.y !== 0) { // Prevents the snake from reversing on itself
-            snack.direction.x = originY
-            snack.direction.y = -originX
-        }
-    });
+    // // Attach event listeners to buttons
+    // document.getElementById('btn-left').addEventListener('click', function() {
+    //     var originX = snack.direction.x
+    //     var originY = snack.direction.y
+    //     if (snack.direction.y !== 0) { // Prevents the snake from reversing on itself
+    //         snack.direction.x = originY
+    //         snack.direction.y = -originX
+    //     }
+    // });
 
-    document.getElementById('btn-right').addEventListener('click', function() {
-        var originX = snack.direction.x
-        var originY = snack.direction.y
-        if (snack.direction.y !== 0) { // Prevents the snake from reversing on itself
-            snack.direction.x = -originY
-            snack.direction.y = originX
-        }
-    });
+    // document.getElementById('btn-right').addEventListener('click', function() {
+    //     var originX = snack.direction.x
+    //     var originY = snack.direction.y
+    //     if (snack.direction.y !== 0) { // Prevents the snake from reversing on itself
+    //         snack.direction.x = -originY
+    //         snack.direction.y = originX
+    //     }
+    // });
 
 
     // 添加键盘事件监听器
