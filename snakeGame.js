@@ -172,9 +172,6 @@ function onPageLoaded() {
     //         snack.direction.y = originX
     //     }
     // });
-
-
-    // 添加键盘事件监听器
     document.addEventListener('keydown', handleKeyDown);
 }
 
