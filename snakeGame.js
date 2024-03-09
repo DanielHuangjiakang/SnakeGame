@@ -154,26 +154,25 @@ function updateCanvas() {
 window.onload = onPageLoaded
 
 function onPageLoaded() {
-    // // Attach event listeners to buttons
-    // document.getElementById('btn-left').addEventListener('click', function() {
-    //     var originX = snack.direction.x
-    //     var originY = snack.direction.y
-    //     if (snack.direction.y !== 0) { // Prevents the snake from reversing on itself
-    //         snack.direction.x = originY
-    //         snack.direction.y = -originX
-    //     }
-    // });
+  
+  document.getElementById('btn-left').addEventListener('click', function() {
+    var originX = snack.direction.x
+    var originY = snack.direction.y 
+      // Rotate left from current direction
+    snack.direction.x = originY
+    snack.direction.y = -originX
+  });
 
-    // document.getElementById('btn-right').addEventListener('click', function() {
-    //     var originX = snack.direction.x
-    //     var originY = snack.direction.y
-    //     if (snack.direction.y !== 0) { // Prevents the snake from reversing on itself
-    //         snack.direction.x = -originY
-    //         snack.direction.y = originX
-    //     }
-    // });
-    document.addEventListener('keydown', handleKeyDown);
+  document.getElementById('btn-right').addEventListener('click', function() {
+    var originX = snack.direction.x
+    var originY = snack.direction.y
+    snack.direction.x = -originY
+    snack.direction.y = originX
+  });
+
+  document.addEventListener('keydown', handleKeyDown);
 }
+
 
 
 function handleKeyDown(event) {
