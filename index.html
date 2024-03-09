@@ -1,111 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retro Game Console UI with Snake Game</title>
-    <style>
-      .retro-console {
-        width: 600px; /* 游戏机宽度 */
-        height: 1000px; /* 游戏机高度 */
-        background-color: #f5f5f5; /* 与图片中的颜色接近 */
-        border-radius: 20px;
-        padding: 10px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        margin: 20px auto;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .screen {
-        width: 520px; /* 屏幕宽度 */
-        height: 520px; /* 屏幕高度 */
-        background-color: #000; /* 屏幕是黑色的 */
-        border: 4px solid #fff; /* 屏幕有白色边框 */
-        border-radius: 10px;
-        margin: 10px auto;
-        color: white;
-        position: relative;
-        overflow: hidden;
-      }
-
-      canvas {
-        width: 100%;
-        height: 100%;
-        display: block; /* 防止 canvas 默认的行内元素导致的额外空间 */
-      }
-
-      .d-pad,
-      .buttons,
-      .select-start {
-        display: flex;
-        justify-content: center;
-        margin: 10px 0;
-      }
-
-      .d-pad button,
-      .buttons button,
-      .select-start button {
-        background-color: #333;
-        color: #fff;
-        border: none;
-        margin: 2px;
-        cursor: pointer;
-        outline: none;
-      }
-
-      .d-pad button {
-        /* Adjust the size for better usability */
-        width: 60px; /* New width */
-        height: 60px; /* New height */
-        /* Other styles remain the same */
-      }
-
-      .buttons button {
-        border-radius: 50%; /* 功能键是圆的 */
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        line-height: 40px;
-      }
-
-      .select-start button {
-        width: 60px;
-        height: 20px;
-      }
-
-      #score_id {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        color: white;
-        font-size: 20px;
-        z-index: 10;
-      }
-
-      /* 其他样式... */
-    </style>
-  </head>
-  <body>
-    <div class="retro-console">
-      <div class="screen">
-        <canvas id="canvas_id" width="260" height="200"></canvas>
-        <h1 id="score_id">0</h1>
-      </div>
-      <div class="d-pad">
-        <button class="left" id="btn-left">&#9664;</button>
-        <!-- Left -->
-        <button class="right" id="btn-right">&#9654;</button>
-        <!-- Right -->
-      </div>
-      <div class="select-start">
-        <!-- 选择开始 -->
-        <!-- <button class="select">选择</button> -->
-        <button class="start" onclick="gameStart()">START</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Game Console UI with Snake Game</title>
+  <!-- Linking the external CSS file for styling -->
+  <link rel="stylesheet" href="snakeGame.css"></link>
+</head>
+<body>
+  <!-- Main container representing the retro game console -->
+  <div class="retro-console">
+    <!-- Screen container where the game is displayed -->
+    <div class="screen">
+      <canvas id="canvas_id" width="260" height="200"></canvas>
+      <!-- Score display within the game screen -->
+      <h1 id="score_id">0</h1>
     </div>
+    <!-- Directional pad with left and right buttons -->
+    <div class="d-pad">
+      <button class="left" id="btn-left">&#9664;</button> <!-- Left button -->
+      <button class="right" id="btn-right">&#9654;</button> <!-- Right button -->
+    </div>
+    <!-- Container for the start button -->
+    <div class="select-start">
+      <!-- Start button to initiate the game -->
+      <button class="start" onclick="gameStart()">START</button>
+    </div>
+  </div>
 
-    <script src="snakeGame.js"></script>
-  </body>
+  <!-- Linking the external JavaScript file containing game logic -->
+  <script src="snakeGame.js"></script>
+</body>
 </html>
