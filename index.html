@@ -1,34 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retro Game Console UI with Snake Game</title>
-  <!-- Linking the external CSS file for styling -->
-  <link rel="stylesheet" href="snakeGame.css"></link>
-</head>
-<body>
-  <!-- Main container representing the retro game console -->
-  <div class="retro-console">
-    <!-- Screen container where the game is displayed -->
-    <div class="screen">
-      <canvas id="canvas_id" width="260" height="200"></canvas>
-      <!-- Score display within the game screen -->
-      <h1 id="score_id">0</h1>
-    </div>
-    <!-- Directional pad with left and right buttons -->
-    <div class="d-pad">
-      <button class="left" id="btn-left">&#9664;</button> <!-- Left button -->
-      <button class="right" id="btn-right">&#9654;</button> <!-- Right button -->
-    </div>
-    <!-- Container for the start button -->
-    <div class="select-start">
-      <!-- Start button to initiate the game -->
-      <button class="start" onclick="gameStart()">START</button>
-    </div>
-  </div>
+  <head>
+    <!-- Meta tags for responsiveness and character set encoding -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Linking the external JavaScript file containing game logic -->
-  <script src="snakeGame.js"></script>
-</body>
+    <!-- Page title -->
+    <title>Retro Game Console UI with Snake Game</title>
+
+    <!-- External CSS for styling -->
+    <link rel="stylesheet" href="snakeGame.css" />
+  </head>
+  <body>
+    <!-- Main container for the retro game console and the instruction blackboard -->
+    <div class="game-and-blackboard">
+      <!-- Section for the retro game console -->
+      <div class="retro-console">
+        <!-- Screen area where the game is displayed -->
+        <div class="screen">
+          <canvas id="canvas_id" width="260" height="200"></canvas>
+          <!-- Score display area within the game screen -->
+          <h1 id="score_id">0</h1>
+        </div>
+
+        <!-- Directional pad with left and right buttons -->
+        <div class="d-pad">
+          <button class="left" id="btn-left">&#9664; Left</button>
+          <button class="right" id="btn-right">&#9654; Right</button>
+        </div>
+
+        <!-- Container for the start button -->
+        <div class="select-start">
+          <button class="start" onclick="gameStart()">START</button>
+        </div>
+      </div>
+
+      <!-- Blackboard section containing game instructions -->
+      <div class="blackboard">
+        <!-- Game title -->
+        <h2 style="text-align: center">Daniel Huang SnackGame Instruction</h2>
+
+        <!-- Section for basic game rules -->
+        <h3>Basic Rules</h3>
+        <p>
+          Players control a snake, directing its movement. As the snake consumes
+          food, it grows longer. The game ends if the snake collides with itself
+          or the game boundary. The aim is to survive as long as possible while
+          consuming food to earn higher scores.
+        </p>
+
+        <!-- Instructions for computer users -->
+        <h3>For Computer Users</h3>
+        <p>
+          Click the Start button to begin the game. Use the left and right arrow
+          keys on the keyboard to control the snake's direction. Alternatively,
+          you can click the left and right buttons on the game console depicted
+          on the screen. Press Start to restart the game.
+        </p>
+
+        <!-- Instructions for mobile users -->
+        <h3>For Mobile Users</h3>
+        <p>
+          Tap the Start button on the screen to start the game. Control the
+          snake by tapping the left and right buttons displayed on the screen.
+          Tap Start again to restart the game.
+        </p>
+
+        <!-- Feedback section -->
+        <h3>Feedback</h3>
+        <p>
+          As this is a personal project, there may be numerous bugs. We welcome
+          everyone to report any bugs found. You can send your feedback to my
+          email: jhuang74@students.cs.ubc.ca.
+        </p>
+      </div>
+    </div>
+
+    <!-- External JavaScript for game logic -->
+    <script src="snakeGame.js"></script>
+  </body>
 </html>
